@@ -1,11 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import TrafficChart from '../dashboard/TrafficChart'
+import TrafficChart from './TrafficChart'
 import StatsGrid from './StatsGrid'
 
-import { WAFStats, SecurityEvent, TrafficData } from '../../types/waf'
-import { generateTrafficData } from '../../utils/chart-data'
+import { WAFStats, SecurityEvent, TrafficData } from '../../app/types/waf'
+import { generateTrafficData } from '../../app/utils/chart-data'
 import ThreatDistribution from './ThreatDistribution'
 import SecurityEvents from './SecurityEvents'
 

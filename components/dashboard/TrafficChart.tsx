@@ -12,7 +12,7 @@ import {
   Legend,
   ChartOptions,
 } from 'chart.js'
-import { TrafficData } from '../../types/waf'
+import { TrafficData } from '../../app/types/waf'
 
 ChartJS.register(
   CategoryScale,

@@ -1,6 +1,6 @@
 'use client'
 
-import { SecurityEvent } from '../../types/waf'
+import { SecurityEvent } from '../../app/types/waf'
 
 const SecurityEvents = () => {
   const events: SecurityEvent[] = [

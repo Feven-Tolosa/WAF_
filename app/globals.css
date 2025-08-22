@@ -4,28 +4,25 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  /* Custom colors for your WAF dashboard */
-  --color-primary-50: #f0f9ff;
-  --color-primary-100: #e0f2fe;
-  --color-primary-200: #bae6fd;
-  --color-primary-300: #7dd3fc;
-  --color-primary-400: #38bdf8;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0284c7;
-  --color-primary-700: #0369a1;
-  --color-primary-800: #075985;
-  --color-primary-900: #0c4a6e;
+  /* Ethiopian color palette */
+  --color-ethio-yellow: #fcd116;
+  --color-ethio-green: #078930;
+  --color-ethio-red: #da121a;
+  --color-ethio-blue: #0f47af;
+  --color-ethio-light: #f0f0f0;
+  --color-ethio-dark: #2d2926;
 
-  --color-dark-50: #f8fafc;
-  --color-dark-100: #f1f5f9;
-  --color-dark-200: #e2e8f0;
-  --color-dark-300: #cbd5e1;
-  --color-dark-400: #94a3b8;
-  --color-dark-500: #64748b;
-  --color-dark-600: #475569;
-  --color-dark-700: #334155;
-  --color-dark-800: #1e293b;
-  --color-dark-900: #0f172a;
+  /* Additional colors for the theme */
+  --color-ethio-yellow-50: #fef9c3;
+  --color-ethio-yellow-100: #fef08a;
+  --color-ethio-yellow-200: #fde047;
+  --color-ethio-yellow-300: #facc15;
+  --color-ethio-yellow-400: #eab308;
+  --color-ethio-yellow-500: #ca8a04;
+  --color-ethio-yellow-600: #a16207;
+  --color-ethio-yellow-700: #854d0e;
+  --color-ethio-yellow-800: #713f12;
+  --color-ethio-yellow-900: #422006;
 }
 
 @theme inline {
@@ -34,28 +31,24 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Extend the theme with custom colors */
-  --color-primary-50: var(--color-primary-50);
-  --color-primary-100: var(--color-primary-100);
-  --color-primary-200: var(--color-primary-200);
-  --color-primary-300: var(--color-primary-300);
-  --color-primary-400: var(--color-primary-400);
-  --color-primary-500: var(--color-primary-500);
-  --color-primary-600: var(--color-primary-600);
-  --color-primary-700: var(--color-primary-700);
-  --color-primary-800: var(--color-primary-800);
-  --color-primary-900: var(--color-primary-900);
+  /* Extend the theme with Ethiopian colors */
+  --color-ethio-yellow: var(--color-ethio-yellow);
+  --color-ethio-green: var(--color-ethio-green);
+  --color-ethio-red: var(--color-ethio-red);
+  --color-ethio-blue: var(--color-ethio-blue);
+  --color-ethio-light: var(--color-ethio-light);
+  --color-ethio-dark: var(--color-ethio-dark);
 
-  --color-dark-50: var(--color-dark-50);
-  --color-dark-100: var(--color-dark-100);
-  --color-dark-200: var(--color-dark-200);
-  --color-dark-300: var(--color-dark-300);
-  --color-dark-400: var(--color-dark-400);
-  --color-dark-500: var(--color-dark-500);
-  --color-dark-600: var(--color-dark-600);
-  --color-dark-700: var(--color-dark-700);
-  --color-dark-800: var(--color-dark-800);
-  --color-dark-900: var(--color-dark-900);
+  --color-ethio-yellow-50: var(--color-ethio-yellow-50);
+  --color-ethio-yellow-100: var(--color-ethio-yellow-100);
+  --color-ethio-yellow-200: var(--color-ethio-yellow-200);
+  --color-ethio-yellow-300: var(--color-ethio-yellow-300);
+  --color-ethio-yellow-400: var(--color-ethio-yellow-400);
+  --color-ethio-yellow-500: var(--color-ethio-yellow-500);
+  --color-ethio-yellow-600: var(--color-ethio-yellow-600);
+  --color-ethio-yellow-700: var(--color-ethio-yellow-700);
+  --color-ethio-yellow-800: var(--color-ethio-yellow-800);
+  --color-ethio-yellow-900: var(--color-ethio-yellow-900);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -71,43 +64,39 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Custom styles for your WAF dashboard */
-.card {
-  background: rgba(30, 41, 59, 0.8);
+/* Ethiopian pattern background */
+.ethio-pattern {
+  background-image: radial-gradient(
+      circle,
+      rgba(252, 209, 22, 0.1) 2px,
+      transparent 2px
+    ),
+    radial-gradient(circle, rgba(252, 209, 22, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Custom styles for Ethiopian theme */
+.ethio-card {
+  background: rgba(45, 41, 38, 0.8);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(252, 209, 22, 0.1);
   border-radius: 16px;
   transition: all 0.3s ease;
 }
 
-.card:hover {
+.ethio-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px -5px rgba(252, 209, 22, 0.2);
 }
 
-.glow {
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+.ethio-glow {
+  box-shadow: 0 0 20px rgba(252, 209, 22, 0.3);
 }
 
-.stat-card {
-  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.attack-indicator {
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    opacity: 0.6;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.6;
-  }
+.ethio-stat-card {
+  background: linear-gradient(135deg, #2d2926 0%, #078930 100%);
+  border: 1px solid rgba(252, 209, 22, 0.2);
 }
 
 .nav-item {
@@ -122,7 +111,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #3b82f6;
+  background: #fcd116;
   transition: width 0.3s ease;
 }
 
@@ -136,14 +125,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(30, 41, 59, 0.5);
+  background: rgba(45, 41, 38, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: #078930;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #0da040;
 }

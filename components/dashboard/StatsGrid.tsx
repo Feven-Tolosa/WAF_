@@ -1,4 +1,4 @@
-import { WAFStats } from '../../types/waf'
+import { WAFStats } from '../../app/types/waf'
 
 const StatsGrid = ({ stats }: { stats: WAFStats }) => {
   const statCards = [
@@ -59,10 +59,11 @@ const StatsGrid = ({ stats }: { stats: WAFStats }) => {
               </span>
             </div> */}
             {/* // Update the color classes to use your custom colors */}
+
             <div
-              className={`w-10 h-10 rounded-lg bg-primary-100 flex items-center justify-center`}
+              className={`w-10 h-10 rounded-lg bg-ethio-yellow-100 flex items-center justify-center`}
             >
-              <span className={`text-primary-500 text-lg`}>
+              <span className={`text-ethio-yellow-600 text-lg`}>
                 {card.icon === 'globe' && '🌐'}
                 {card.icon === 'ban' && '🚫'}
                 {card.icon === 'bolt' && '⚡'}
