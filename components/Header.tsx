@@ -13,7 +13,10 @@ const Header = () => {
           <div className='w-10 h-10 rounded-lg bg-ethio-yellow flex items-center justify-center'>
             <i className='fas fa-shield-alt text-ethio-dark'></i>
           </div>
-          <h1 className='text-xl font-bold text-ethio-yellow'>EthioGuard</h1>
+          <Link href='/' className='text-xl font-bold text-ethio-yellow'>
+            EthioGuard
+          </Link>
+          {/* <h1 className='text-xl font-bold text-ethio-yellow'>EthioGuard</h1> */}
         </div>
 
         <nav className='hidden md:flex space-x-8'>
