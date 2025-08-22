@@ -1,10 +1,36 @@
+// app/components/layout/Header.tsx
 'use client'
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useState, useEffect } from 'react'
 
 const Header = () => {
   const pathname = usePathname()
+  const [darkMode, setDarkMode] = useState(false)
+
+  useEffect(() => {
+    // Check if dark mode is preferred
+    if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
+      setDarkMode(true)
+      document.documentElement.classList.add('dark')
+    } else {
+      setDarkMode(false)
+      document.documentElement.classList.remove('dark')
+    }
+  }, [])
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode)
+    if (!darkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
 
   return (
     <header className='sticky top-0 z-50 bg-ethio-dark/90 backdrop-blur-md border-b border-ethio-yellow'>
@@ -70,6 +96,25 @@ const Header = () => {
         </nav>
 
         <div className='flex items-center space-x-4'>
+          {/* Dark/Light mode toggle */}
+          <label className='theme-toggle'>
+            <input
+              type='checkbox'
+              checked={darkMode}
+              onChange={toggleDarkMode}
+            />
+            <span className='theme-slider'>
+              <span
+                className='fas fa-sun text-ethio-yellow absolute left-1 top-1 text-xs'
+                style={{ opacity: darkMode ? 0 : 1 }}
+              ></span>
+              <span
+                className='fas fa-moon text-ethio-dark absolute right-1 top-1 text-xs'
+                style={{ opacity: darkMode ? 1 : 0 }}
+              ></span>
+            </span>
+          </label>
+
           <div className='relative'>
             <div className='w-3 h-3 bg-ethio-red rounded-full absolute -top-1 -right-1'></div>
             <button className='p-2 rounded-lg bg-ethio-dark/70 hover:bg-ethio-dark border border-ethio-yellow/20'>
