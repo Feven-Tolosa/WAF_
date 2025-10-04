@@ -21,9 +21,9 @@ const Header = () => {
 
         <nav className='hidden md:flex space-x-8'>
           <Link
-            href='/'
+            href='/dashboard'
             className={`nav-item ${
-              pathname === '/'
+              pathname === '/dashboard'
                 ? 'text-ethio-yellow font-medium'
                 : 'text-gray-400 hover:text-ethio-yellow'
             }`}

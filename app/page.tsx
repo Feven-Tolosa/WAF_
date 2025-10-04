@@ -231,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-      {/* <section className='py-16 px-4 bg-gradient-to-r from-ethio-green to-ethio-blue'>
+      <section className='py-16 px-4 bg-ethio-dark/50'>
         <div className='container mx-auto text-center'>
           <h2 className='text-3xl md:text-4xl font-bold text-white mb-6'>
             Start Your Security Journey Today
@@ -249,7 +249,7 @@ export default function Home() {
             Get Started Now
           </Link>
         </div>
-      </section> */}
+      </section>
     </div>
   )
 }
