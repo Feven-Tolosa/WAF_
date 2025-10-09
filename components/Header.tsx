@@ -83,7 +83,11 @@ const Header = () => {
             <div className='w-9 h-9 rounded-full bg-gradient-to-r from-ethio-green to-ethio-blue flex items-center justify-center'>
               <span className='font-semibold text-white'>A</span>
             </div>
-            <span className='text-sm font-medium text-ethio-light'>Admin</span>
+            <Link href='/Admin'>
+              <span className='text-sm font-medium text-ethio-light'>
+                Admin
+              </span>
+            </Link>
           </div>
         </div>
       </div>
