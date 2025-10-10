@@ -79,16 +79,17 @@ const Header = () => {
               <i className='fas fa-bell text-ethio-yellow'></i>
             </button>
           </div>
-          <div className='flex items-center space-x-2 cursor-pointer'>
-            <div className='w-9 h-9 rounded-full bg-gradient-to-r from-ethio-green to-ethio-blue flex items-center justify-center'>
-              <span className='font-semibold text-white'>A</span>
-            </div>
-            <Link href='/Admin'>
+          <Link href='/Admin'>
+            <div className='flex items-center space-x-2 cursor-pointer'>
+              {' '}
+              <div className='w-9 h-9 rounded-full bg-gradient-to-r from-ethio-green to-ethio-blue flex items-center justify-center'>
+                <span className='font-semibold text-white'>A</span>
+              </div>
               <span className='text-sm font-medium text-ethio-light'>
                 Admin
               </span>
-            </Link>
-          </div>
+            </div>
+          </Link>
         </div>
       </div>
     </header>
