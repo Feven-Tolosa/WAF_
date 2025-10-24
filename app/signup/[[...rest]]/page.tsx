@@ -12,24 +12,22 @@ export default function SignUpPage() {
           </h1>
 
           <SignUp
-            path='/sign-up'
+            path='/signup'
             routing='path'
-            signInUrl='/sign-in'
+            signInUrl='/signin'
             appearance={{
               elements: {
+                card: 'bg-transparent shadow-none',
                 formButtonPrimary:
                   'bg-ethio-yellow text-ethio-dark font-semibold hover:bg-ethio-yellow/90 transition-colors',
-                card: 'bg-transparent shadow-none',
-                headerTitle: 'hidden',
-                headerSubtitle: 'hidden',
+                formFieldInput:
+                  'bg-white/80 border border-ethio-yellow/20 text-black rounded p-3 placeholder:text-gray-500',
+                formFieldLabel: 'text-black font-medium',
                 footerActionLink:
                   'text-ethio-yellow hover:underline font-medium',
-                formFieldInput:
-                  'bg-ethio-dark/50 border border-ethio-yellow/20 text-ethio-light rounded p-3',
-                formFieldLabel: 'text-ethio-light font-medium',
               },
               variables: {
-                colorText: '#f5f5f5',
+                colorText: '#000000',
                 colorPrimary: '#ffcc00',
               },
             }}

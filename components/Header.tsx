@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
 
 const Header = () => {
   const pathname = usePathname()
@@ -56,7 +56,7 @@ const Header = () => {
           {/* === Clerk Auth Section === */}
           <SignedOut>
             <Link
-              href='/sign-in'
+              href='/signin'
               className='px-4 py-2 rounded-lg bg-ethio-yellow text-ethio-dark font-semibold hover:bg-ethio-light transition'
             >
               Sign In
