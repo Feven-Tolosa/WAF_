@@ -57,7 +57,7 @@ const Header = () => {
           <SignedOut>
             <Link
               href='/signin'
-              className='px-4 py-2 rounded-lg bg-ethio-yellow text-ethio-dark font-semibold hover:bg-ethio-light transition'
+              className='px-4 py-2 rounded-lg bg-ethio-yellow text-ethio-dark font-semibold hover:bg-ethio-light/50 transition'
             >
               Sign In
             </Link>
