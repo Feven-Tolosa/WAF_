@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 
 const Header = () => {
   const pathname = usePathname()
@@ -9,6 +10,7 @@ const Header = () => {
   return (
     <header className='sticky top-0 z-50 bg-ethio-dark/90 backdrop-blur-md border-b border-ethio-yellow'>
       <div className='container mx-auto px-4 py-3 flex justify-between items-center'>
+        {/* === Left: Logo === */}
         <div className='flex items-center space-x-2'>
           <div className='w-10 h-10 rounded-lg bg-ethio-yellow flex items-center justify-center'>
             <i className='fas fa-shield-alt text-ethio-dark'></i>
@@ -16,80 +18,64 @@ const Header = () => {
           <Link href='/' className='text-xl font-bold text-ethio-yellow'>
             EthioGuard
           </Link>
-          {/* <h1 className='text-xl font-bold text-ethio-yellow'>EthioGuard</h1> */}
         </div>
 
+        {/* === Center: Nav links === */}
         <nav className='hidden md:flex space-x-8'>
-          <Link
-            href='/dashboard'
-            className={`nav-item ${
-              pathname === '/dashboard'
-                ? 'text-ethio-yellow font-medium'
-                : 'text-gray-400 hover:text-ethio-yellow'
-            }`}
-          >
-            Dashboard
-          </Link>
-          <Link
-            href='/firewall'
-            className={`nav-item ${
-              pathname === '/firewall'
-                ? 'text-ethio-yellow font-medium'
-                : 'text-gray-400 hover:text-ethio-yellow'
-            }`}
-          >
-            Firewall
-          </Link>
-          <Link
-            href='/analytics'
-            className={`nav-item ${
-              pathname === '/analytics'
-                ? 'text-ethio-yellow font-medium'
-                : 'text-gray-400 hover:text-ethio-yellow'
-            }`}
-          >
-            Analytics
-          </Link>
-          <Link
-            href='/reports'
-            className={`nav-item ${
-              pathname === '/reports'
-                ? 'text-ethio-yellow font-medium'
-                : 'text-gray-400 hover:text-ethio-yellow'
-            }`}
-          >
-            Reports
-          </Link>
-          <Link
-            href='/settings'
-            className={`nav-item ${
-              pathname === '/settings'
-                ? 'text-ethio-yellow font-medium'
-                : 'text-gray-400 hover:text-ethio-yellow'
-            }`}
-          >
-            Settings
-          </Link>
+          {[
+            { href: '/dashboard', label: 'Dashboard' },
+            { href: '/firewall', label: 'Firewall' },
+            { href: '/analytics', label: 'Analytics' },
+            { href: '/reports', label: 'Reports' },
+            { href: '/settings', label: 'Settings' },
+          ].map(({ href, label }) => (
+            <Link
+              key={href}
+              href={href}
+              className={`nav-item ${
+                pathname === href
+                  ? 'text-ethio-yellow font-medium'
+                  : 'text-gray-400 hover:text-ethio-yellow'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
 
+        {/* === Right: Notifications + Auth === */}
         <div className='flex items-center space-x-4'>
+          {/* Notification bell */}
           <div className='relative'>
             <div className='w-3 h-3 bg-ethio-red rounded-full absolute -top-1 -right-1'></div>
             <button className='p-2 rounded-lg bg-ethio-dark/70 hover:bg-ethio-dark border border-ethio-yellow/20'>
               <i className='fas fa-bell text-ethio-yellow'></i>
             </button>
           </div>
-          <Link href='/Admin'>
-            <div className='flex items-center space-x-2 cursor-pointer'>
-              {' '}
-              <div className='w-9 h-9 rounded-full bg-gradient-to-r from-ethio-green to-ethio-blue flex items-center justify-center'>
-                <span className='font-semibold text-white'>A</span>
-              </div>
-              <span className='text-sm font-medium text-ethio-light'>
-                Admin
-              </span>
-            </div>
-          </Link>
+
+          {/* === Clerk Auth Section === */}
+          <SignedOut>
+            <Link
+              href='/sign-in'
+              className='px-4 py-2 rounded-lg bg-ethio-yellow text-ethio-dark font-semibold hover:bg-ethio-light transition'
+            >
+              Sign In
+            </Link>
+          </SignedOut>
+
+          <SignedIn>
+            <UserButton
+              afterSignOutUrl='/sign-out'
+              appearance={{
+                elements: {
+                  avatarBox:
+                    'w-9 h-9 border-2 border-ethio-yellow rounded-full',
+                  userButtonPopoverCard:
+                    'bg-ethio-dark text-ethio-light border border-ethio-yellow/20',
+                },
+              }}
+            />
+          </SignedIn>
         </div>
       </div>
     </header>
