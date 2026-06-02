@@ -1,35 +1,69 @@
-# NextGen WAF Dashboard
+# 🛡️ EthioGuard WAF
 
-A modern, responsive Web Application Firewall (WAF) dashboard built with Next.js, TypeScript, and Tailwind CSS.
+EthioGuard WAF is a modern Web Application Firewall (WAF) dashboard inspired by Ethiopian culture and built with modern web technologies. It provides real-time security monitoring, analytics, firewall rule management, and threat visualization through a responsive and user-friendly interface.
 
-## Features
+## ✨ Features
 
-- Real-time traffic monitoring with interactive charts
-- Security event tracking and visualization
-- Threat distribution analysis
-- Responsive design that works on desktop and mobile
-- Simulated live data updates
+* 🎨 Ethiopian-inspired UI design
+* 📊 Real-time traffic and threat monitoring
+* 🔥 Firewall rule management
+* 📈 Security analytics dashboard
+* 🔔 Notifications and alerts
+* 📋 Report generation
+* 🌙 Dark/Light theme support
+* 📱 Fully responsive design
+* ⚡ Built with Next.js App Router
+* 🛡️ TypeScript support
 
-## Tech Stack
+## 🚀 Tech Stack
 
-- **Framework**: Next.js 14 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **Charts**: Chart.js with react-chartjs-2
-- **Icons**: Lucide React
+* Next.js 14
+* TypeScript
+* Tailwind CSS v4
+* Chart.js
+* React Chart.js 2
+* Font Awesome
 
-## Getting Started
-
-### Prerequisites
-
-- Node.js 18.17 or later
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
+## 📦 Installation
 
 ```bash
-git clone <your-repo-url>
-cd my-project
+git clone https://github.com/yourusername/ethioguard-waf.git
+cd ethioguard-waf
+npm install
+npm run dev
 ```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+## 🔧 Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+NEXTAUTH_SECRET=your_secret_key
+NEXTAUTH_URL=http://localhost:3000
+```
+
+## 🏗️ Build
+
+```bash
+npm run build
+npm start
+```
+
+## 📄 License
+
+MIT License
+
+## ⭐ Support
+
+If you like this project, consider giving it a star on GitHub.
+
+---
+
+Built with ❤️ in Ethiopia.
