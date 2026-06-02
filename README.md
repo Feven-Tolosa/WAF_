@@ -83,3 +83,19 @@ This project is licensed under the MIT License.
 ---
 
 Developed with ❤️ in Ethiopia using Next.js and TypeScript.
+
+## 👩‍💻 Author
+
+**Feven Tolosa**
+
+- GitHub: https://github.com/Feven-Tolosa
+- LinkedIn: https://www.linkedin.com/in/feven-mercy-42baa8323/
+
+
+
+
+
+
+
+
+
