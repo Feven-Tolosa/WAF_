@@ -1,69 +1,85 @@
 # 🛡️ EthioGuard WAF
 
-EthioGuard WAF is a modern Web Application Firewall (WAF) dashboard inspired by Ethiopian culture and built with modern web technologies. It provides real-time security monitoring, analytics, firewall rule management, and threat visualization through a responsive and user-friendly interface.
+EthioGuard WAF is a modern Web Application Firewall (WAF) dashboard inspired by Ethiopian culture and designed to provide real-time security monitoring, threat analysis, and firewall management through an intuitive and responsive interface.
+
+## 🌐 Live Demo
+
+**Live Site:** https://waf-theta.vercel.app/
 
 ## ✨ Features
 
-* 🎨 Ethiopian-inspired UI design
-* 📊 Real-time traffic and threat monitoring
-* 🔥 Firewall rule management
-* 📈 Security analytics dashboard
-* 🔔 Notifications and alerts
-* 📋 Report generation
-* 🌙 Dark/Light theme support
-* 📱 Fully responsive design
-* ⚡ Built with Next.js App Router
-* 🛡️ TypeScript support
+* Real-time security monitoring dashboard
+* Firewall rule management
+* Traffic and threat analytics
+* Security event tracking
+* Report generation
+* Notification system
+* Dark and light theme support
+* Fully responsive design
+* Ethiopian-inspired visual identity
 
-## 🚀 Tech Stack
+## 🛠️ Built With
 
-* Next.js 14
+* Next.js 14 (App Router)
 * TypeScript
 * Tailwind CSS v4
 * Chart.js
 * React Chart.js 2
 * Font Awesome
 
-## 📦 Installation
+## 🚀 Getting Started
+
+Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/ethioguard-waf.git
-cd ethioguard-waf
+git clone https://github.com/Feven-Tolosa/WAF_.git
+cd WAF
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
+
+Start the development server:
+
+```bash
 npm run dev
 ```
 
-Open:
-
-```text
-http://localhost:3000
-```
+Open http://localhost:3000 in your browser.
 
 ## 🔧 Environment Variables
 
 Create a `.env.local` file:
 
 ```env
-NEXT_PUBLIC_API_URL=http://localhost:8000
-NEXTAUTH_SECRET=your_secret_key
+NEXT_PUBLIC_API_URL=your_api_url
+NEXTAUTH_SECRET=your_secret
 NEXTAUTH_URL=http://localhost:3000
 ```
 
-## 🏗️ Build
+## 📦 Production Build
 
 ```bash
 npm run build
 npm start
 ```
 
+## 📸 Screenshots
+
+<img width="959" height="449" alt="image" src="https://github.com/user-attachments/assets/45ec1ebe-4b20-4b36-a4c8-035d41e9b7b6" />
+
+
+## 🎯 Project Goals
+
+The goal of EthioGuard WAF is to demonstrate how modern web technologies can be combined with cybersecurity concepts to create a professional, scalable, and visually engaging security management platform.
+
 ## 📄 License
 
-MIT License
-
-## ⭐ Support
-
-If you like this project, consider giving it a star on GitHub.
+This project is licensed under the MIT License.
 
 ---
 
-Built with ❤️ in Ethiopia.
+Developed with ❤️ in Ethiopia using Next.js and TypeScript.
